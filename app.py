@@ -16,7 +16,7 @@ st.set_page_config(page_title="SMS Spam Detector", page_icon="📧", layout="wid
 # --- NLTK and Model Setup ---
 # Download NLTK data
 nltk.download('stopwords', quiet=True)
-nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab')
 
 ps = PorterStemmer()
 
