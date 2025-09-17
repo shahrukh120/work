@@ -16,7 +16,7 @@ import pytesseract
 # --- Pre-load NLTK data ---
 # These commands will run once when the app starts on the server.
 nltk.download('stopwords')
-nltk.download('punkt')
+nltk.download('punkt_tab')
 
 # Initialize Porter Stemmer
 ps = PorterStemmer()
