@@ -13,13 +13,16 @@ import pytesseract
 # -----------------
 
 # Download NLTK data (only needs to be done once)
+# Block for 'stopwords'
 try:
     nltk.data.find('corpora/stopwords')
-except nltk.downloader.DownloadError:
+except LookupError: # <- The fix
     nltk.download('stopwords')
+
+# Block for 'punkt'
 try:
     nltk.data.find('tokenizers/punkt')
-except nltk.downloader.DownloadError:
+except LookupError: # <- The fix
     nltk.download('punkt')
 
 # Initialize Porter Stemmer
