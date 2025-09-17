@@ -13,14 +13,10 @@ import pytesseract
 # -----------------
 
 # Download NLTK data (only needs to be done once)
-try:
-    nltk.data.find('corpora/stopwords')
-except nltk.downloader.DownloadError:
-    nltk.download('stopwords')
-try:
-    nltk.data.find('tokenizers/punkt')
-except nltk.downloader.DownloadError:
-    nltk.download('punkt')
+# --- Pre-load NLTK data ---
+# These commands will run once when the app starts on the server.
+nltk.download('stopwords')
+nltk.download('punkt')
 
 # Initialize Porter Stemmer
 ps = PorterStemmer()
